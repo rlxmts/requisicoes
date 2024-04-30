@@ -5,7 +5,7 @@ async function buscaApi(elemento){
    return conexaoConvertida;
 }
 
-async function buscaVideo(evento){
+async function buscaVideos(evento){
     evento.preventDefault();
     const dadosPesquisa = document.querySelector('[data-pesquisa]').value;
     console.log(dadosPesquisa)
@@ -16,4 +16,4 @@ async function buscaVideo(evento){
 
 const botaoPesquisa = document.querySelector("[data-botao]");
 
-botaoPesquisa.addEventListener( 'click', evento =>  buscaVideo(evento));
+botaoPesquisa.addEventListener( 'click', evento =>  buscaVideos(evento));
