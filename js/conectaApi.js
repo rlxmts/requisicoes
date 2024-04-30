@@ -10,8 +10,8 @@ async function listaVideos(){
     }
 }
 
-async function addVideo(){
-    const conexao = fetch(endPointApi, {
+async function addVideo(titulo, descricao, url, imagem){
+    const conexao = await fetch(endPointApi, {
         method: "POST",
         headers: {
             "Content-type":"application/json"
@@ -24,7 +24,7 @@ async function addVideo(){
         })
     });
 
-    const conexaoConvertida = conexao.json();
+    const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
 
