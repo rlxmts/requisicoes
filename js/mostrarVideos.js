@@ -28,3 +28,7 @@ async function listaVideos(){
 }
 
 listaVideos()
+
+export const mostrarVideos = {
+    criarCard
+}
